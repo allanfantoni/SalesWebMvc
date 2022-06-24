@@ -45,15 +45,9 @@ namespace SalesWebMvc.Models
             Department = department;
         }
 
-        public void AddSales(SalesRecord salesRecord)
-        {
-            Sales.Add(salesRecord);
-        }
+        public void AddSales(SalesRecord salesRecord) => Sales.Add(salesRecord);
 
-        public void RemoveSales(SalesRecord salesRecord)
-        {
-            Sales.Remove(salesRecord);
-        }
+        public void RemoveSales(SalesRecord salesRecord) => Sales.Remove(salesRecord);
 
         public double TotalSales(DateTime initial, DateTime final) => Sales.Where(x => x.Date >= initial && x.Date <= final).Sum(x => x.Amount);
     }
