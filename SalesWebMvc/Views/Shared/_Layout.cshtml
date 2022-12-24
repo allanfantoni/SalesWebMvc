@@ -6,7 +6,9 @@
     <title>@ViewData["Title"] - Sales Web</title>
 
     <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-darkly.css" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-flatly.css" />
+        <link rel="stylesheet" href="~/css/customizable.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
@@ -36,7 +38,14 @@
                     <li><a asp-area="" asp-controller="Sellers" asp-action="Index">Sellers</a></li>
                     <li><a asp-area="" asp-controller="SalesRecords" asp-action="Index">Sales</a></li>
                 </ul>
+                <ul class="theme-switcher">
+                    <li><input name="color" id="light" type="radio" checked /></li>
+                    <li><input name="color" id="dark" type="radio" /></li>
+                </ul>
             </div>
+            @*<div>
+                
+            </div>*@
         </div>
     </nav>
 
@@ -53,6 +62,7 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/customizable.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
