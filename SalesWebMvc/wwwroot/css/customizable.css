@@ -1,11 +1,13 @@
 ﻿body {
+
 }
+
 #dark {
     --input-color: black;
 }
 
 #light {
-    --input-color: gray;
+    --input-color: white;
 }
 
 .theme-switcher {
